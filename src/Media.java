@@ -3,28 +3,28 @@ import java.util.Scanner;
 public class Media {
 
 
-    private static int soma;
+    private static float soma;
 
     public static void main(String[] args) {
-       int soma = 0;
-       int mediafinal;
+       float soma = 0;
+       float mediafinal;
 
        notas();
        media();
 
    }
 
-    private static int lerTeclado() {
-       int valor;
+    private static float lerTeclado() {
+       float valor;
            Scanner ler = new Scanner(System.in);
-           valor = ler.nextInt();
+           valor = ler.nextFloat();
            return valor;
        }
 
 
-    private static int notas() {
+    private static float notas() {
         int i;
-        int[] number = new int[10];
+        float[] number = new float[10];
         for (i = 0; i < 4; i++) {
             System.out.println("Informe uma nota  de 0 a 10: " + (i+1));
             number[i] = lerTeclado();
@@ -40,10 +40,9 @@ public class Media {
 
     }
 
-    private static int media() {
-        int mediaFinal = 0;
+    private static void media() {
+        float mediaFinal;
         System.out.println("Media Final = ");
         System.out.println(mediaFinal = soma / 4);
-        return 0;
     }
 }
