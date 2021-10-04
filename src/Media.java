@@ -26,9 +26,15 @@ public class Media {
         int i;
         int[] number = new int[10];
         for (i = 0; i < 4; i++) {
-            System.out.println("Informe a nota " +i);
+            System.out.println("Informe uma nota  de 0 a 10: " + (i+1));
             number[i] = lerTeclado();
-            soma += number[i];
+            if (number[i] > 10 || number[i] <0){
+                System.out.println("Número tem que ser entre 0 e 10");
+                i--;
+            }
+            else {
+                soma += number[i];
+            }
         }
         return soma;
 
